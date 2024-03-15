@@ -75,7 +75,7 @@ pip install -r requirements.txt
 > **_NOTE:_** Before running any of the commands below, please rename `setup.env` to `.env` and provide the required API token (e.g., OpenAI) in the `.env` file.
 
 To access get the API of OpenAI, visit the OpenAI Platform and sign up or log in [here](https://platform.openai.com/signup)
-and for Replicate if you want run online (here)[https://replicate.com/account/api-tokens].
+and for Replicate if you want run online [here](https://replicate.com/account/api-tokens).
 
 ### Setting Up the Collection in Milvus
 
