@@ -61,19 +61,21 @@ docker ps
 ```
 
 You should see the following containers listed:
-
-![Screenshot of running Docker containers](images/docker_ps.png)
+![Screenshot of running Docker containers](assets/2024-03-15-12-10-05.png)
 
 Now, let's set up the Python environment. Activate your virtual environment and install the required Python packages:
 
 ```bash
-python3 -m venv myenv
-source myenv/bin/activate
+python3 -m venv venv
+source venv/bin/activate
 pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
 > **_NOTE:_** Before running any of the commands below, please rename `setup.env` to `.env` and provide the required API token (e.g., OpenAI) in the `.env` file.
+
+To access get the API of OpenAI, visit the OpenAI Platform and sign up or log in [here](https://platform.openai.com/signup)
+and for Replicate if you want run online (here)[https://replicate.com/account/api-tokens].
 
 ### Setting Up the Collection in Milvus
 
@@ -85,11 +87,10 @@ python setup_milvus.py
 
 ### Ingesting the PDF Files Using Spark (Local Mode)
 
-Once the environment is set up, we can proceed with ingesting the PDF files into Milvus using Spark. We provide instructions for ingesting a set of annual reports stored in the `./data/annual_reports` directory. Before running the ingestion routine, make sure to set the path to your Java home directory. Spark 3.4 supports Java 8, 11, and 17. 
-
+Once the environment is set up, we can proceed with ingesting the PDF files into Milvus using Spark. We provide instructions for ingesting a set of annual reports stored in the `./data/annual_reports` directory. Before running the ingestion routine, make sure to set the path to your Java home directory. Spark 3.4 supports Java 8, 11, and 17. `export JAVA_HOME=<path to java home>`
 
 ```bash
-export JAVA_HOME=<path to java home>
+export JAVA_HOME=/usr/bin/java
 python3 pdf_ingestion.py
 ```
 After the ingestion process is complete, we can verify the data in Milvus by accessing the Milvus UI in our browser.  If everything goes well, the data will be ingested into Milvus. You can check the collection by visiting [http://localhost:8000](http://localhost:8000) in your browser.
@@ -121,6 +122,8 @@ python3 qa_service_llama2.py
 > **_NOTE:_** Before running this command, please rename `setup.env` to `.env` and provide the Replicate key.
 
 A similar Gradio interface will be shown. The instructions to query mentioned above also apply to this scenario.
+
+
 
 ## Conclusion 
 
