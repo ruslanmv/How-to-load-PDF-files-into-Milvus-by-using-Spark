@@ -1,0 +1,9 @@
+pymilvus==2.2.13
+pyspark==3.4.0
+sentence_transformers==2.2.2
+findspark==2.0.1
+pypdf2==3.0.1
+pycryptodome==3.15.0
+gradio==4.1.1
+replicate==0.15.7
+openai==0.28.1
