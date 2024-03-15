@@ -82,7 +82,7 @@ and for Replicate if you want run online [here](https://replicate.com/account/ap
 To set up the collection in Milvus, run the following command:
 
 ```bash
-python setup_milvus.py
+python3 setup_milvus.py
 ```
 
 ### Ingesting the PDF Files Using Spark (Local Mode)
