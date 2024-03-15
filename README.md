@@ -87,7 +87,7 @@ python setup_milvus.py
 
 ### Ingesting the PDF Files Using Spark (Local Mode)
 
-Once the environment is set up, we can proceed with ingesting the PDF files into Milvus using Spark. We provide instructions for ingesting a set of annual reports stored in the `./data/annual_reports` directory. Before running the ingestion routine, make sure to set the path to your Java home directory. Spark 3.4 supports Java 8, 11, and 17. `export JAVA_HOME=<path to java home>`
+Once the environment is set up, we can proceed with ingesting the PDF files into Milvus using Spark. We provide instructions for ingesting a set of annual reports stored in the `./data/annual_reports` directory. Before running the ingestion routine, make sure to set the path to your Java home directory. Spark 3.4 supports Java 8, 11, and 17. `export JAVA_HOME=<path to java home>` you can use the command `which java` after that, you can set JAVA_HOME environment variable yourself, for example
 
 ```bash
 export JAVA_HOME=/usr/bin/java
